@@ -8,7 +8,7 @@ module.exports = function() {
     passport.use(new GitHubStrategy({
     clientID: '0d574f219f32e7d1022d',
     clientSecret: 'be0669de4c78db73fb30247e7db327f3ba2ca7e9',
-    callbackURL: 'http://localhost:5000/auth/github/callback'
+    callbackURL: 'https://dswa5-11-ac-pt3008401.herokuapp.com/auth/github/callback'
     }, function(accessToken, refreshToken, profile, done) {
         Usuario.findOrCreate(
             { "login" : profile.username},
